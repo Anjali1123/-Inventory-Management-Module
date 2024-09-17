@@ -9,15 +9,12 @@ import com.inventorymanagementmodule.exception.ResourceNotFoundException;
 import com.inventorymanagementmodule.repository.BrandRepository;
 import com.inventorymanagementmodule.repository.ProductRepository;
 
-//ProductService class handles business logic related to Product management.
-//It interacts with both ProductRepository and BrandRepository for CRUD operations.
 @Service
 public class ProductService {
-	// Injecting ProductRepository to handle product-related database operations
+	
 	@Autowired
     private ProductRepository productRepository;
 	
-	// Injecting BrandRepository to handle brand-related database operations
     @Autowired
     private BrandRepository brandRepository;
     
@@ -31,8 +28,7 @@ public class ProductService {
         return productRepository.findById(id)
             .orElseThrow(() -> new ResourceNotFoundException("Product not found"));
     }
-    
-    //Retrieves all products that are linked to a brand of a specific type.
+   
     public List<Product> getProductsByType(String brandType) {
         return productRepository.findByBrand_BrandType(brandType);
     }

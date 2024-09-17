@@ -27,42 +27,34 @@ public class Product {
 
     // Getters and Setters
     
-    //Get the ID of the product.
     public Long getId() {
         return id;
     }
 
-    //Set the ID of the product.
     public void setId(Long id) {
         this.id = id;
     }
 
-    // Get the Brand associated with the product.
     public Brand getBrand() {
         return brand;
     }
 
-    //Set the Brand for the product.
     public void setBrand(Brand brand) {
         this.brand = brand;
     }
 
-    //Get the name of the product.
     public String getProductName() {
         return productName;
     }
 
-    //Set the name of the product.
     public void setProductName(String productName) {
         this.productName = productName;
     }
 
-    //Get the price of the product.
     public Double getProductPrice() {
         return productPrice;
     }
 
-    //Set the price of the product.
     public void setProductPrice(Double productPrice) {
         this.productPrice = productPrice;
     }

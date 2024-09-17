@@ -9,7 +9,7 @@ import com.inventorymanagementmodule.entity.Product;
 import com.inventorymanagementmodule.service.ProductService;
 
 @RestController
-@RequestMapping("/api/product")// Base URL for all product-related operations
+@RequestMapping("/api/product")
 public class ProductController {
     @Autowired
     private ProductService productService;

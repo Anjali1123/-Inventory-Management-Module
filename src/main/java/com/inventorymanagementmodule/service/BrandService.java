@@ -9,11 +9,9 @@ import com.inventorymanagementmodule.entity.Brand;
 import com.inventorymanagementmodule.exception.ResourceNotFoundException;
 import com.inventorymanagementmodule.repository.BrandRepository;
 
-//BrandService class provides the business logic related to Brand management.
 @Service
 public class BrandService {
 	
-	//Injecting BrandRepository to interact with the database.
     @Autowired
     private BrandRepository brandRepository;
 
@@ -29,13 +27,11 @@ public class BrandService {
             .orElseThrow(() -> new ResourceNotFoundException("Brand not found"));
     }
     
-    //Fetches a specific Brand entity by its ID
-    public List<Brand> getBrandById(String string) {
+   public List<Brand> getBrandById(String string) {
 		
 		return brandRepository.findByBrandType(string);
 	}
     
-    //Creates a new Brand entity or updates an existing one in the database.
     public Brand createOrUpdateBrand(Brand brand) {
         return brandRepository.save(brand);
     }

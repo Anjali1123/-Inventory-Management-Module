@@ -15,7 +15,7 @@ import com.inventorymanagementmodule.entity.Brand;
 import com.inventorymanagementmodule.service.BrandService;
 
 @RestController
-@RequestMapping("/api/brand")// Base URL for all brand-related operations
+@RequestMapping("/api/brand")
 public class BrandController {
     @Autowired
     private BrandService brandService;
